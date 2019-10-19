@@ -62,7 +62,7 @@ while True:
             for (x, y, w, h) in hands:
                 l = getPoints(prevx,prevy,x,y)
                 for i in l:
-                    mouse.moveTo(i[0], i[1] )
+                    mouse.moveTo(i[0]*2, i[1]*2 )
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 print(l)
                 prevx=x
