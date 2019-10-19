@@ -24,7 +24,7 @@ def capture_histogram(source=0):
     while True:
         _, frame = cap.read()
         frame = cv2.flip(frame, 1)
-        frame = cv2.resize(frame, (1000, 600))
+        frame = cv2.resize(frame, (700, 600))
 
         font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.putText(frame, "Place region of the hand inside box and press `A`",

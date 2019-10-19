@@ -8,7 +8,7 @@ cap = cv2.VideoCapture(0)
 # press 'A' to confirm
 # source is set to inbuilt webcam by default. Pass source=1 to use an
 # external camera.
-hist = handy.capture_histogram(source=0)
+hist = handy.capture_histogram(source=1)
 
 while True:
     ret, frame = cap.read()

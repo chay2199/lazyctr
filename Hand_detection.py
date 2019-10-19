@@ -19,7 +19,7 @@ def getPoints(x1,y1,x2,y2):
     dist=(y2-y1)*(y2-y1) + (x2-x1)*(x2-x1)
     dist=math.sqrt(dist)
 
-    step=dist/1
+    step=dist/3
     if(x1==x2):
         while(y1<y2):
             points.append((x1,y1))
@@ -62,9 +62,14 @@ while True:
             for (x, y, w, h) in hands:
                 l = getPoints(prevx,prevy,x,y)
                 for i in l:
+<<<<<<< Updated upstream
                     mouse.moveTo(i[0]*2, i[1]*2 )
+=======
+                    mouse.moveTo(i[0]*3, i[1]*2)
+                    print(i[0]*3, i[1]*2)
+>>>>>>> Stashed changes
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                print(l)
+
                 prevx=x
                 prevy=y
         elif len(contour) == 0:
